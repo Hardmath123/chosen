@@ -31,8 +31,8 @@ function choose(choices, cb, options) {
         var key = d.toString();
         var exit = ["\003", "\x1b"];
         var enter = ["\x0d", "\x20"];
-        var next = ["a", "l", "j", "\x1b[D"];
-        var prev = ["q", "p", "k", "\x1b[A"];
+        var next = ["a", "l", "j", "\x1b[B", "\x1b[C"]; // not used, just documentation
+        var prev = ["q", "p", "k", "\x1b[A", "\x1b[D"];
 
         if (exit.indexOf(key) !== -1) {
             done(null);
