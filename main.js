@@ -14,6 +14,14 @@ var styles = {
         chosen: function(s) {
             return "   \x1b[37m" + s + "\x1b[0m";
         }
+    },
+    "indent": {
+        normal: function(s) {
+            return "  " + s;
+        },
+        chosen: function(s) {
+            return "   " + s;
+        }
     }
 }
 
