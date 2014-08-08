@@ -23,3 +23,10 @@ choose(
     }
 );
 ```
+
+Interaction
+-----------
+chosen interaction was—ahem—*chosen* to be intuitive:
+* `<enter>` and `<space>` select the current choice
+* `<esc>` and `<^C>` to escape (sends `null`)
+* `(up arrow, down arrow)`, `(k,j)` (vim!),`(q, a)`, and `(p, l)` for scrolling up/down (any other key defaults to "down")
