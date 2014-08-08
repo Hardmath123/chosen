@@ -29,7 +29,7 @@ Styles
 ------
 You can feed any of the following options:
 
-* ***style***: either ">", "gray", or an object `{normal: <function>, chosen: <function>}`, where the functions return a formatted version of their inputs
+* **style**: one of `[">", "gray", "indent"]`, or an object `{normal: <function>, chosen: <function>}`, where the functions return a formatted version of their inputs
 
 Interaction
 -----------
