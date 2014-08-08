@@ -20,9 +20,16 @@ choose(
     ["English", "Klingon", "Malbolge"],
     function(answer, index) {
         console.log("I like " + answer + ", too!");
-    }
+    },
+    {} // options
 );
 ```
+
+Styles
+------
+You can feed any of the following options:
+
+* ***style***: either ">", "gray", or an object `{normal: <function>, chosen: <function>}`, where the functions return a formatter version of their inputs
 
 Interaction
 -----------

@@ -1,3 +1,24 @@
+var styles = {
+    ">": {
+        normal: function(s) {
+            return "  " + s;
+        },
+        chosen: function(s) {
+            return "> " + s;
+        }
+    },
+    "gray": {
+        normal: function(s) {
+            return "   \x1b[90m" + s + "\x1b[0m";
+        },
+        chosen: function(s) {
+            return "   \x1b[37m" + s + "\x1b[0m";
+        }
+    }
+}
+
+
+
 function choose(choices, cb, options) {
     var stdin  = (options?options.input: null) || process.stdin;
     var stdout = (options?options.output:null) || process.stdout;
@@ -6,9 +27,10 @@ function choose(choices, cb, options) {
     stdin.setRawMode(true);
 
     function draw(choices, chosen) {
+        var formatter = options.style ? (styles[options.style] || options.style) : styles[">"];
         choices.forEach(function(choice, index) {
             stdout.write(
-                (index === chosen ? "> " : "  ") + choice
+                (index === chosen ? formatter.chosen : formatter.normal)(choice)
             );
             stdout.write("\n");
         });
